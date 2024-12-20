@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  h1, h2 {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add a transition to button hover for better experience */
+  button:focus {
+    outline: none;
+  }
+  
+  /* Dark mode button */
+  button.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .dark-mode th {
+    background-color: #333;
+    color: #f5f5f5;
+  }
+  
+  .dark-mode tbody tr:nth-child(even) {
+    background-color: #232323;
+  }
+  
+  .dark-mode tbody tr:hover {
+    background-color: #444;
+  }
+  
+  /* Form Elements */
+  input, select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Section for charts */
+  .charts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .charts div {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .charts div {
+      width: 100%;
+    }
+  }
+  
+  /* General container for pages */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .container.dark-mode {
+    background-color: #232323;
+  }
+  
+  

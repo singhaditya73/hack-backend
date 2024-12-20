@@ -1,0 +1,78 @@
+/* General styling for the component */
+.security-log {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.security-log h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #444;
+}
+
+/* Table container for responsive behavior */
+.table-container {
+  overflow-x: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Styling for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+thead th {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 0.9rem;
+}
+
+/* Status-specific row styling */
+.status-success td {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.status-error td {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Responsive behavior for small screens */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.8rem;
+  }
+
+  thead th, tbody td {
+    padding: 10px;
+  }
+
+  .security-log h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,150 @@
+/* Overall dashboard container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #2c3e50; /* Dark background for the dashboard */
+  color: #001013; /* Light text for better contrast */
+}
+
+/* Header section for the dashboard */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e; /* Slightly darker background for the header */
+  color: white;
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.security-status {
+  font-size: 16px;
+}
+
+.security-status span {
+  font-weight: bold;
+  color: #f39c12; /* Yellow color for the status */
+}
+
+/* Logout button styling */
+.logout-btn {
+  padding: 10px 20px;
+  background-color: #e74c3c; /* Red background for logout */
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Main content section styling */
+main {
+  flex-grow: 1; /* Take the remaining space after the header */
+  padding: 20px;
+  overflow-y: auto; /* Prevent content from overflowing */
+}
+
+/* Section for top content: Role Management & Session Monitor */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between the sections */
+  margin-bottom: 20px;
+}
+
+.top-section > div {
+  flex: 1 1 45%; /* Each section takes up 45% of the width and grows/shrinks as needed */
+  background-color: #ecf0f1; /* Light background for the sections */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section for bottom content: Security Audit Log */
+.bottom-section {
+  margin-top: 20px;
+}
+
+.bottom-section > div {
+  background-color: #ecf0f1; /* Light background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas layout for session management */
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Gap between the canvases */
+}
+
+.canvas-container canvas {
+  width: 100%; /* Ensures the canvas fills the available width */
+  height: auto;
+  max-width: 100%; /* Prevents overflow */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to the canvas for a lifted look */
+}
+
+/* Dashboard responsiveness */
+@media (max-width: 1024px) {
+  .top-section > div {
+    flex: 1 1 100%; /* On medium screens, sections take up full width */
+  }
+
+  .canvas-container canvas {
+    height: 300px; /* Fixed height for better scaling on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .security-status {
+    margin-top: 10px;
+  }
+
+  .logout-btn {
+    margin-top: 10px;
+    margin-left: 0; /* Align logout button below the header on small screens */
+  }
+
+  .canvas-container canvas {
+    height: 250px; /* Slightly reduced height on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 20px; /* Smaller header on small screens */
+  }
+
+  .security-status {
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    font-size: 0.9rem; /* Smaller logout button text */
+    padding: 8px 15px;
+  }
+
+  .canvas-container canvas {
+    height: 200px; /* Smaller height for canvases on extra small screens */
+  }
+}

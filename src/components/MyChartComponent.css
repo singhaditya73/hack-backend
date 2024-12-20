@@ -1,0 +1,26 @@
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px; /* Ensure consistent height */
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* For better readability on small screens */
+@media (max-width: 768px) {
+  .chart-container {
+    max-width: 90%;
+    height: 300px;
+  }
+}
